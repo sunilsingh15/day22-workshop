@@ -44,4 +44,10 @@ public class RSVPRestTemplate {
         return result.getBody();
     }
 
+    public RSVP findByID(int id) {
+        ResponseEntity<RSVP> result = restTemplate.getForEntity(RSVP_ENDPOINT_URL + "/" + id, RSVP.class, id);
+
+        return result.getBody();
+    }
+
 }

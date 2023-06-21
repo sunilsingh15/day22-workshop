@@ -6,10 +6,12 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import sg.edu.nus.iss.day22workshop.model.RSVP;
 
+@Service
 public class RSVPRestTemplate {
 
     private static final String RSVP_ENDPOINT_URL = "http://localhost:4000/api/rsvps";

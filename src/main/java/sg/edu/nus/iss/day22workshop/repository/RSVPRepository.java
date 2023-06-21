@@ -27,7 +27,7 @@ public class RSVPRepository {
     }
 
     public List<RSVP> findAll() {
-        List<RSVP> rsvps = template.queryForList(findAllSQL, RSVP.class);
+        List<RSVP> rsvps = template.query(findAllSQL, BeanPropertyRowMapper.newInstance(RSVP.class));
         return rsvps;
     }
 
